@@ -32,7 +32,7 @@ If you use our algorithm in any of your publications or projects, please cite ou
     Hofer, M., Maurer, M., and Bischof, H.:
     Efficient 3D Scene Abstraction Using Line Segments,
     In Computer Vision and Image Understanding (CVIU), 2016.
-    http://dx.doi.org/10.1016/j.cviu.2016.03.017
+    https://doi.org/10.1016/j.cviu.2016.03.017
 
 Requirements
 ============
