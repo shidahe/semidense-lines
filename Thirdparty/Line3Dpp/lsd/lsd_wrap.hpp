@@ -9,7 +9,7 @@
  *   2012-03-24
  *   reference
  *     Rafael Grompone von Gioi, Jérémie Jakubowicz, Jean-Michel Morel, and Gregory Randall,
- *     LSD: a Line Segment Detector, Image Processing On Line, 2012. http://dx.doi.org/10.5201/ipol.2012.gjmr-lsd
+ *     LSD: a Line Segment Detector, Image Processing On Line, 2012. https://doi.org/10.5201/ipol.2012.gjmr-lsd
  *
  *  Notes
  *  5/18/2013  Author of LSD, rafael grompone von gioi <grompone@gmail.com>, has allowed the code to be BSD for OpenCV. I will
