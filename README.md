@@ -6,7 +6,7 @@ This repo presents the code for my [Master's thesis](http://webdocs.cs.ualberta.
 
 Our method simplifies the per-keyframe pointcloud produced by a semi-dense SLAM system using 3D line segments. Then, we take the extracted 3D line segments and reconstruct a surface using them. In this way, surface of the scene viewed by the camera can be reconstructed while the camera is exploring. Our method produce accurate 3D line segments with few outliers, which makes the reconstructed surface more structually meaningful than surface reconstructed using feature points or random selected points. See my [thesis page](http://webdocs.cs.ualberta.ca/~vis/thesis_shida/) for more details.
 
-This version of software is based on [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2). We use the semi-dense version of ORB-SLAM which is implemented based on the technique described in [this paper](https://www.researchgate.net/profile/Raul_Mur-Artal/publication/282807894_Probabilistic_Semi-Dense_Mapping_from_Highly_Accurate_Feature-Based_Monocular_SLAM/links/561cd04308ae6d17308ce267.pdf). We release this software under GPLv3 license. See [Dependencies.md](#) for other dependencies.
+This version of software is based on [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2). We use the semi-dense version of ORB-SLAM which is implemented based on the technique described in [this paper](https://www.researchgate.net/profile/Raul_Mur-Artal/publication/282807894_Probabilistic_Semi-Dense_Mapping_from_Highly_Accurate_Feature-Based_Monocular_SLAM/links/561cd04308ae6d17308ce267.pdf). We release this software under GPLv3 license. See [Dependencies.md](https://github.com/shidahe/semidense-lines/blob/master/Dependencies.md) for other dependencies.
 
 If you use this software in an academic work, please cite:
 
@@ -55,11 +55,19 @@ sudo apt-get install libcgal-dev
 ```
 sudo apt-get install libboost-all-dev
 ```
+#### EdgeDrawing (Included in Thirdparty folder):
+We use [EdgeDrawing](http://ceng.anadolu.edu.tr/CV/EdgeDrawing/) edge detector in our system. The library is available as binary files. The version for 64-bit Linux is included in the *Thirdparty* folder.
+
+#### EDLines and Line3D++ (Included in Thirdparty folder):
+We compare our system against methods using [EDLines](http://ceng.anadolu.edu.tr/cv/EDLines/) and [Line3D++](https://github.com/manhofer/Line3Dpp). EDLines is avaiable as binary files and the version for 64-bit Linux is included in *Thirdparty* folder. We also include Line3D++ in the *Thirdparty* folder and it will be compiled when running the `build.sh` script. 
+
 
 
 # 2. Building
 
-Similar to ORB-SLAM2, `build.sh` can build the Thirdparty libraries and semi-dense ORB-SLAM2 with 3D line segment extraction and surface reconstruction. Please make sure you have installed all required dependencies (see section 1). Execute:
+Similar to ORB-SLAM2, `build.sh` can build the Thirdparty libraries and semi-dense ORB-SLAM2 with 3D line segment extraction and surface reconstruction. Please make sure you have installed all required dependencies (see section 1). 
+
+Execute:
 ```
 chmod +x build.sh
 ./build.sh
