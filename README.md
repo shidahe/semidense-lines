@@ -102,6 +102,15 @@ The system can be run in the same way of running ORB-SLAM2. Here are examples fo
 
 # 4. Results
 
-In default configuration, the sparse SLAM system run once and then all other processing (including semi-dense mapping, 3D line segment extraction and surface reconstruction) happens offline afterwards. Note the offline processing can take a long time which makes the windows unresponsive. Please wait until the processing is finished in order to save the results. Online processing can be enabled by uncomment the *OnlineLoop* macro in *ProbabilityMapping.cc* file. However, this is not recommended due to the fact that real-time performance is not yet guaranteed.
+In default configuration, the sparse SLAM system run once and then all other processing (including semi-dense mapping, 3D line segment extraction and surface reconstruction) happens offline afterwards. Note the offline processing can take a long time which makes the windows unresponsive. **Please wait until the processing is finished in order to save the results.** Online processing can be enabled by uncomment the *OnlineLoop* macro in *ProbabilityMapping.cc* file. However, this is not recommended due to the fact that real-time performance is not yet guaranteed.
 
-The results are saved in the folder *results_line_segments* with an inner folder named by the starting time. In that folder, *info.txt* reports time usage and used parameters. *model.obj* is the reconstructed mesh of the scene. *semi_pointcloud.obj* is the raw semi-dense pointcloud from semi-dense mapping. *line_segments.obj* contains the extracted 3D line segments before clustering, and *line_segments_clustered_incr.obj* contains the clustered line segments. *line_segments_edlines.obj* contains the line segments extracted with decoupled line segment fitting. Files start with *Line3D++* are created by Line3D++.
+The results are saved in the directory *results_line_segments* under a subdirectory named by the starting time. 
+
+In each result directory:
+- *info.txt* reports time usage and used parameters. 
+- *model.obj* is the reconstructed mesh of the scene. 
+- *semi_pointcloud.obj* is the raw semi-dense pointcloud from semi-dense mapping. 
+- *line_segments.obj* contains the extracted 3D line segments before clustering. 
+- *line_segments_clustered_incr.obj* contains the clustered line segments. 
+- *line_segments_edlines.obj* contains the line segments extracted using decoupled line segment fitting. 
+- Files with *Line3D++* in their names are created by Line3D++.
