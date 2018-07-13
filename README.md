@@ -76,7 +76,7 @@ Sometimes the build will fail with errors related to c++11 standard, and simply 
 
 # 3.  Examples
 
-The system can be run in the same way of running ORB-SLAM2. Here is an example of running on EuRoC dataset (monocular). It can also run using ROS. See [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) for more details.
+The system can be run in the same way of running ORB-SLAM2. Here are examples for running on EuRoC and TUM-RGBD dataset (monocular). It can also run using ROS. See [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2) for more details.
 
 ## EuRoC Dataset
 
@@ -88,6 +88,15 @@ The system can be run in the same way of running ORB-SLAM2. Here is an example o
 ```
 ```
 ./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
+```
+
+## TUM Dataset
+
+1. Download a sequence from http://vision.in.tum.de/data/datasets/rgbd-dataset/download and uncompress it.
+
+2. Execute the following command. Change `TUMX.yaml` to TUM1.yaml,TUM2.yaml or TUM3.yaml for freiburg1, freiburg2 and freiburg3 sequences respectively. Change `PATH_TO_SEQUENCE_FOLDER`to the uncompressed sequence folder.
+```
+./Examples/Monocular/mono_tum Vocabulary/ORBvoc.bin Examples/Monocular/TUMX.yaml PATH_TO_SEQUENCE_FOLDER
 ```
 
 
