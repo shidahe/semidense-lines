@@ -132,11 +132,10 @@ To reproduce the results, please run the following commands. Please change `PATH
 ./Examples/Monocular/mono_tum Vocabulary/ORBvoc.bin Examples/Monocular/TUM3.yaml PATH_TO_SEQUENCE_fr3_structure_texture_near
 ```
 
-3. Fig 6: This figure shows reconstructed surface from sequence *EuRoC  MAV  Vicon  Room  101*. In default configuration, the surface model with line segments endpoints will be reconstructed. 
+3. Fig 6: This figure shows reconstructed surfaces from sequence *EuRoC  MAV  Vicon  Room  101*. In default configuration, the surface model with line segments endpoints will be reconstructed. To reconstruct the surface model with map points, please change all `mpModeler->AddLineSegmentKeyFrameEntry(kf)` calls in *ProbabilityMapping.cc* to `mpModeler->AddKeyFrameEntry(kf)` and build again. Running the command again will reconstruct the surface using only ORB-SLAM map points. 
 ```
 ./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_V101/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/V101.txt 
 ```
-To reconstruct the surface model with map points, please change all `mpModeler->AddLineSegmentKeyFrameEntry()` calls in *ProbabilityMapping.cc* to `mpModeler->AddKeyFrameEntry()` and build again. Running the command above again will reconstruct the surface using only ORB-SLAM map points. 
 
 4. Table 1:  
 
