@@ -139,5 +139,11 @@ To reproduce the results, please run the following commands. Please change `PATH
 
 4. Table 1:  
 
-5. Table 2: 
+5. Table 2: The table presents the number of vertices of results from sequences: *EuRoC  MAV  Vicon  Room  101*, *EuRoC  MAV  Machine  Hall  01*, *TUM RGBD fr3-large-cabinet*, *TUM RGBD fr1-room*. The number of vertices in *.obj* files can be checked using [MeshLab](http://www.meshlab.net/).
+```
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_V101/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/V101.txt 
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_MH01/cam0/data Examples/Monocular/EuRoC_TimeStamps/MH01.txt 
+./Examples/Monocular/mono_tum Vocabulary/ORBvoc.bin Examples/Monocular/TUM3.yaml PATH_TO_SEQUENCE_fr3_large_cabinet
+./Examples/Monocular/mono_tum Vocabulary/ORBvoc.bin Examples/Monocular/TUM1.yaml PATH_TO_SEQUENCE_fr1_room
+```
 
