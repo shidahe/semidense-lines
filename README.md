@@ -137,7 +137,11 @@ To reproduce the results, please run the following commands. Please change `PATH
 ./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_V101/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/V101.txt 
 ```
 
-4. Table 1:  
+4. Table 1: This table shows results from sequences: *EuRoC  MAV  Vicon  Room  101* and *EuRoC  MAV  Vicon  Room  201*. In order to calculate the distance, please use the MATLAB scripts in the *eval* folder.
+```
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_V101/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/V101.txt 
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_V201/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/V201.txt 
+```
 
 5. Table 2: The table presents the number of vertices of results from sequences: *EuRoC  MAV  Vicon  Room  101*, *EuRoC  MAV  Machine  Hall  01*, *TUM RGBD fr3-large-cabinet*, *TUM RGBD fr1-room*. The number of vertices in *.obj* files can be checked using [MeshLab](http://www.meshlab.net/).
 ```
