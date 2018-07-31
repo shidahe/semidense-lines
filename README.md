@@ -82,9 +82,9 @@ The system can be run in the same way of running ORB-SLAM2. Here are examples fo
 
 1. Download a sequence (ASL format) from http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets
 
-2. Execute the following first command for V1 and V2 sequences, or the second command for MH sequences. Change PATH_TO_SEQUENCE_FOLDER and SEQUENCE according to the sequence you want to run.
+2. Execute the following first command for V1 and V2 sequences, or the second command for MH sequences. Change `PATH_TO_SEQUENCE` and `SEQUENCE` according to the sequence you want to run.
 ```
-./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_FOLDER/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
 ```
 ```
 ./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
@@ -114,3 +114,31 @@ In each result directory:
 - *line_segments_clustered_incr.obj* contains the clustered line segments. 
 - *line_segments_edlines.obj* contains the line segments extracted using decoupled line segment fitting. 
 - Files with *Line3D++* in their names are created by Line3D++.
+
+## Reproduction
+
+To reproduce the results, please run the following commands. Please change `PATH_TO_SEQUENCE_*` to the corresponding dicrectory of the sequence. The figures are screenshots of models rendered in [MeshLab](http://www.meshlab.net/).
+
+1. Fig 4: This figure shows results from 4 different sequences: *EuRoC  MAV  Vicon  Room  101*, *EuRoC  MAV  Machine  Hall  01*, *TUM RGBD fr3-large-cabinet*, *TUM RGBD fr1-room*. 
+```
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_V101/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/V101.txt 
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_MH01/cam0/data Examples/Monocular/EuRoC_TimeStamps/MH01.txt 
+./Examples/Monocular/mono_tum Vocabulary/ORBvoc.bin Examples/Monocular/TUM3.yaml PATH_TO_SEQUENCE_fr3_large_cabinet
+./Examples/Monocular/mono_tum Vocabulary/ORBvoc.bin Examples/Monocular/TUM1.yaml PATH_TO_SEQUENCE_fr1_room
+```
+
+2. Fig 5: This figure contains result from sequence *TUM RGB-D fr3-structure-texture-near*. 
+```
+./Examples/Monocular/mono_tum Vocabulary/ORBvoc.bin Examples/Monocular/TUM3.yaml PATH_TO_SEQUENCE_fr3_structure_texture_near
+```
+
+3. Fig 6: This figure shows reconstructed surface from sequence *EuRoC  MAV  Vicon  Room  101*. In default configuration, the surface model with line segments endpoints will be reconstructed. 
+```
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_V101/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/V101.txt 
+```
+To reconstruct the surface model with map points, please change all `mpModeler->AddLineSegmentKeyFrameEntry()` calls in *ProbabilityMapping.cc* to `mpModeler->AddKeyFrameEntry()` and build again. Running the command above again will reconstruct the surface using only ORB-SLAM map points. 
+
+4. Table 1:  
+
+5. Table 2: 
+
