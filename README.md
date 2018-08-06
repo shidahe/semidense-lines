@@ -37,6 +37,37 @@ Required by g2o (see below). Download and install instructions can be found at: 
 ```
 sudo apt-get install libblas-dev liblapack-dev liblapacke-dev
 ```
+#### RapidJSON 
+[RapidJSON](http://rapidjson.org) needs to be installed from for instance this [github repository](https://github.com/Tencent/rapidjson):
+```
+git clone https://github.com/Tencent/rapidjson
+cd rapidjson
+mkdir build
+cmake ..
+make && sudo make install
+```
+#### Ceres-solver
+[Ceres-solver](http://ceres-solver.org) needs to be installed from for instance this [github repository](https://ceres-solver.googlesource.com/ceres-solver): 
+```
+ git clone https://ceres-solver.googlesource.com/ceres-solver
+ cd ceres-solver
+ mkdir build
+ cd build
+ cmake ..
+ make &&  sudo make install
+```
+**Warning : ** cmake version 3.5 is needed to compile ceres-solver.
+
+#### glog
+[glog](https://github.com/google/glog) needs to be installed from for instance this [github repository] ( ): 
+```
+ git clone https://github.com/google/glog.git
+ cd glog
+ mkdir build
+ cd build
+ cmake -DGFLAGS_NAMESPACE=google -DCMAKE_CXX_FLAGS=-fPIC ..
+ make && sudo make install
+```
 
 #### DBoW2 and g2o (Included in Thirdparty folder)
 We use modified versions of the [DBoW2](https://github.com/dorian3d/DBoW2) library to perform place recognition and [g2o](https://github.com/RainerKuemmerle/g2o) library to perform non-linear optimizations. Both modified libraries (which are BSD) are included in the *Thirdparty* folder.
