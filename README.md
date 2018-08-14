@@ -87,7 +87,7 @@ The system can be run in the same way of running ORB-SLAM2. Here are examples fo
 ./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
 ```
 ```
-./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
+./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.bin Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt 
 ```
 
 ## TUM Dataset
