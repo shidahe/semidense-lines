@@ -117,7 +117,7 @@ In each result directory:
 
 ## Reproduction
 
-To reproduce the results, please run the following commands. Please change `PATH_TO_SEQUENCE_*` to the corresponding dicrectory of the sequence. The figures are screenshots of models rendered in [MeshLab](http://www.meshlab.net/).
+To reproduce the results shown in our ICPR 2018 paper ([arxiv](https://arxiv.org/abs/1708.03275)), please run the following commands. Please change `PATH_TO_SEQUENCE_*` to the corresponding dicrectory of the sequence. The figures are screenshots of models rendered in [MeshLab](http://www.meshlab.net/).
 
 1. Fig 4: This figure shows results from 4 different sequences: *EuRoC  MAV  Vicon  Room  101*, *EuRoC  MAV  Machine  Hall  01*, *TUM RGBD fr3-large-cabinet*, *TUM RGBD fr1-room*. 
 ```
