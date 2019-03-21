@@ -17,6 +17,9 @@ If you use this software in an academic work, please cite:
       year={2018}
     }
 
+If you want a fast real-time surface reconstruction system that works with real robots, checkout Jun's repo: https://github.com/atlas-jj/ORB-SLAM-free-space-carving (Used for long distance teleoperation, very cool)
+
+
 # 1. Prerequisites
 The software is tested in **64-bit Ubuntu 14.04**. 
 
