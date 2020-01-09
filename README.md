@@ -52,7 +52,7 @@ Apart from the dependencies list above for ORB-SLAM2, additional libraries are n
 
 #### CGAL: 
 ```
-sudo apt-get install libcgal-dev libcgal-qt5-dev
+sudo apt-get install libcgal-dev
 ```
 #### Boost:
 ```
