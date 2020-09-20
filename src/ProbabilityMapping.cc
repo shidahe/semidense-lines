@@ -192,7 +192,7 @@ void ProbabilityMapping::SaveSemiDensePoints()
 }
 
 
-ProbabilityMapping::ProbabilityMapping(ORB_SLAM2::Map* pMap)
+ProbabilityMapping::ProbabilityMapping(ORB_SLAM2::Map* pMap):mbResetRequested(false)
 {
     mpMap = pMap;
     mbFinishRequested = false; //init
