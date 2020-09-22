@@ -25,7 +25,7 @@
 namespace ORB_SLAM2
 {
 
-Map::Map():mnMaxKFid(0)
+Map::Map():mnMaxKFid(0),mpModel(NULL)
 {
 }
 
